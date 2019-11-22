@@ -1,4 +1,4 @@
-const Joi = require('joi');
+const Joi = require('@hapi/joi');
 const moment = require('moment');
 const mongoose = require('mongoose');
 

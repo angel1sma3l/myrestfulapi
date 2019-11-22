@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const{ Movie, validate: validateGenre } = require('../models/movie'); 
 const {Genre} = require ('../models/genre');
-const mongoose = require('mongoose');
 const validateObjectId = require('../middleware/validateObjectId');
 const auth = require('../middleware/auth');
 

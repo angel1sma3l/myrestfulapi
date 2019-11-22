@@ -1,5 +1,5 @@
 const config = require('config');
-const Joi = require('joi');
+const Joi = require('@hapi/joi');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 
