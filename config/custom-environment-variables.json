@@ -1,5 +1,5 @@
 
 {
   "jwtPrivateKey": "vidly_jwtPrivateKey",
-  "db": "mongodb+srv://dbmaelo:1234@maelovidly-glvo4.azure.mongodb.net/vidly?retryWrites=true&w=majority"
+  "db": "vidly_db"
 }

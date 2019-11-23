@@ -159,3 +159,15 @@
 {"message":"Connected to mongodb://localhost/vidly...","level":"info"}
 {"message":"Listening on port 3000...","level":"info"}
 {"message":"Connected to mongodb+srv://dbmaelo:1234@maelovidly-glvo4.azure.mongodb.net/vidly?retryWrites=true&w=majority...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb+srv://dbmaelo:1234@maelovidly-glvo4.azure.mongodb.net/vidly?retryWrites=true&w=majority...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb+srv://dbmaelo:1234@maelovidly-glvo4.azure.mongodb.net/vidly?retryWrites=true&w=majority...","level":"info"}
