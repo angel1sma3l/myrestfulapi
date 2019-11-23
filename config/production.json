@@ -1,8 +1,0 @@
-{
-  "name": "Vidly - production",
-  "mail": {
-    "host": "prod-mail-server"
-  },
-  "db": "vidly_db"
-
-}
