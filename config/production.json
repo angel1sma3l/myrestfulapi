@@ -3,6 +3,6 @@
   "mail": {
     "host": "prod-mail-server"
   },
-  "db": "vidly_db"
+  "db": "mongodb+srv://dbmaelo:1234@maelovidly-glvo4.azure.mongodb.net/test?retryWrites=true&w=majority"
 
 }
