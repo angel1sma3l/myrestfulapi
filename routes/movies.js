@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const{ Movie, validate: validateGenre } = require('../models/movie'); 
+const{ Movie, validateMovie, validate: validateGenre } = require('../models/movie'); 
 const {Genre} = require ('../models/genre');
 const validateObjectId = require('../middleware/validateObjectId');
 const auth = require('../middleware/auth');
@@ -21,8 +21,8 @@ router.get('/:id', validateObjectId, async (req, res) => {
 });
 
 router.post('/', auth, async (req, res) => {
-  const { error } = validate(req.body); 
-  if (error) return res.status(400).send(error.details[0].message);
+  const { error } = validateMovie(req.body); 
+  if (error) return res.status(400).send('error.details[0].message');
 
   const genre = await Genre.findById(req.body.genreId);
   if(!genre) return res.status(400).send(error.details[0].message);

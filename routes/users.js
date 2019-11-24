@@ -1,4 +1,3 @@
-const config = require('config');
 const auth = require('../middleware/auth');
 const jwt = require('jsonwebtoken');
 const _ = require('lodash');
@@ -6,19 +5,19 @@ const bcryptjs = require('bcryptjs');
 //Password Complexity use for password validation.
 //const PasswordComplexity = require('joi-password-complexity');
 const mongoose = require('mongoose');
-const { User, validate} = require('../models/user');
+const { User, validateUser} = require('../models/user');
 const express = require('express');
 const router = express.Router();
 
 //Routers
   router.get('/me', auth, async (req, res) => {  
-    throw new Error('Not working', err);
+    //throw new Error('Not working', err);
     const user = await User.findById(req.user._id).select('-password');
     res.send(user);
   });
 
   router.post('/', async (req, res) => {
-      const { error } = validate(req.body);
+      const { error } = validateUser(req.body);
       if (error) return res.status(400).send(error.details[0].message);
 
         let user = await User.findOne({email: req.body.email});

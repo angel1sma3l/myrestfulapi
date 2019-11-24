@@ -62,4 +62,4 @@ async function createMovie(title, genre) {
   //createMovie('Terminator', new Genre({name: 'Action'}));
 
 module.exports.Movie = Movie;
-module.exports.validate = validateMovie;
+module.exports.validateMovie = validateMovie;

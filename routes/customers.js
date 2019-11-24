@@ -5,7 +5,7 @@ const {Customer, validateCustomer} = ('../models/customer');
 
 //ROUTE methods Get
 router.get('/', async (req, res) => {
-  const customer = await c.Customer.find().sort('name');
+  const customer = await Customer.find().sort('name');
   res.send(customer);
 });
 

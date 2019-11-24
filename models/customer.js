@@ -1,4 +1,4 @@
-const Joi = require('joi');
+const Joi = require('@hapi/joi');
 const mongoose = require('mongoose');
 
 
@@ -36,4 +36,4 @@ function validateCustomer(customer) {
   }
 
   module.exports.Customer = Customer;
-  module.exports.validateCustomer = validateCustomer();
+  module.exports.validateCustomer = validateCustomer;
