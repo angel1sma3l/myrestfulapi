@@ -1,12 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router();
-const {Customer, validateCustomer} = ('../models/customer');
+const {Customer, validateCustomer} = require('../models/customer');
 
 //ROUTE methods Get
 router.get('/', async (req, res) => {
-  const customer = await Customer.find().sort('name');
-  res.send(customer);
+  const customers = await Customer.find().sort('name');
+  res.send(customers);
 });
 
 router.post('/', async (req, res) => {
@@ -17,6 +17,7 @@ router.post('/', async (req, res) => {
       name: req.body.name,
       phone: req.body.phone
 });
+  await customer.save();
 
   res.send(customer);
 });
