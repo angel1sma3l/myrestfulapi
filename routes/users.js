@@ -12,7 +12,7 @@ const router = express.Router();
 //Routers
   router.get('/me', auth, async (req, res) => {  
     //throw new Error('Not working', err);
-    const user = await User.findById(req.user._id).select('-password');
+    const user = await User.findOne({email: req.user.email}).select('-password');
     res.send(user);
   });
 
@@ -35,7 +35,7 @@ const router = express.Router();
       const token = user.generateAuthToken();
 
       //sending token in header
-      res.header('x-auth-token', token).send(_.pick(user, ['_id', 'name', 'email']));//use _.pick to select only 
+      //res.header('x-auth-token', token).send(_.pick(user, ['_id', 'name', 'email']));//use _.pick to select only 
       //to select user.name and user.email istead of the entire user.
 
       await user.save();

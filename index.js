@@ -8,7 +8,8 @@ require('./startup/routes')(app);
 require('./startup/db')();
 require('./startup/validation')();
 
+
 //port 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 const server = app.listen(port, () => winston.info(`Listening on port ${port}...`));
 module.exports = server;

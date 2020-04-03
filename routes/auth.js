@@ -21,8 +21,13 @@ const router = express.Router();
         if (!validPassword) return res.status(400).send('Email or Password incorrect!');
     
         const token = user.generateAuthToken();
+        
 
-        res.send(token);
+        res.cookie('token', token, { httpOnly: true })
+        .sendStatus(200);
+            
+        // res.send(token);
+        //.redirect('http://localhost:8000/api/users/me');
    
   });
 

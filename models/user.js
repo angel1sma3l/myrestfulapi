@@ -29,7 +29,11 @@ const userSchema = new mongoose.Schema({
  //generateAuthToken function
  userSchema.methods.generateAuthToken = function (){
 //creating json web token
- const token = jwt.sign({_id: this._id, isAdmin: this.isAdmin}, config.get('jwtPrivateKey'));
+ const privatekey = config.get('jwtPrivateKey');
+ const payload = {email: this.email, isAdmin: this.isAdmin};
+ const token = jwt.sign( payload, privatekey, {
+     expiresIn: '1h'
+ });
 
  return token;
  }
