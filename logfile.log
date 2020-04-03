@@ -560,3 +560,5 @@
 {"message":"Connected to mongodb://localhost/vidly...","level":"info"}
 {"message":"Listening on port 8000...","level":"info"}
 {"message":"Connected to mongodb://localhost/vidly...","level":"info"}
+{"message":"Listening on port 8000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly...","level":"info"}

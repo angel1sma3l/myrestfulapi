@@ -9,6 +9,11 @@ const {User, validateUser} = require('../models/user');
 const express = require('express');
 const router = express.Router();
 
+router.get('/', async (req, res) => {  
+  //throw new Error('Not working', err);
+  const user = await User.find().select('-password');
+  res.send(user);
+});
 //Routers
   router.get('/me', auth, async (req, res) => {  
     //throw new Error('Not working', err);
