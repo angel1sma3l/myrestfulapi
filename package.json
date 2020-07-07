@@ -35,7 +35,7 @@
     "mongodb": "^3.3.2",
     "mongoose": "^5.7.7",
     "morgan": "^1.9.1",
-    "npm": "6.14.4",
+    "npm": "6.14.6",
     "pug": "^2.0.4",
     "winston": "^3.2.1",
     "winston-mongodb": "^3.0.2"
